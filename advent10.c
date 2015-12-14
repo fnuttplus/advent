@@ -11,7 +11,7 @@ int main(){
 	out = (char*)malloc(sizeof(start));
 	memcpy(out, start, sizeof(start));
 
-	for (ii = 0; ii < 50; ii++) {
+	for (ii = 0; ii < 60; ii++) {
 		inl = outl+1;
 		in = (char*)realloc(in, inl);
 		memcpy(in, out, inl);
@@ -31,8 +31,8 @@ int main(){
 			}
 			out[outl] = 0;
 		}
-//		printf("%s %d\n", out, outl);
-
+		printf("%d: %d /%f\n", ii+1, outl, (float)outl/(float)(inl-1));
+//		Conway's Constant: 1.303577...
 	}
 	printf("%d\n",outl);
 	free(in);
