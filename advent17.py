@@ -5,7 +5,7 @@ def combinations(m, con, used):
 	for i in range(len(con)):
 		if con[i] < m:
 			if i < len(con)-1:
-				n += combinations(m-con[i], con[1+i-len(con):], used + [con[i]])
+				n += combinations(m-con[i], con[i+1:], used + [con[i]])
 		elif con[i] == m:
 			if len(used) < 4:
 				global s
