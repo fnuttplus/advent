@@ -1,5 +1,3 @@
-from itertools import combinations as comb
-
 """
 Player:
 HP: 100
