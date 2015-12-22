@@ -72,7 +72,7 @@ for d in range(4,12):
 gear = {weapons[3], armor[1], rings[1]}
 print(gear, calccost())
 
-print("part 2")
+#print("part 2")
 for d in range(4,12):
 	c = d
 	for a in range(9):
