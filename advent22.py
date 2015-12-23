@@ -9,17 +9,17 @@ Boss:
 Hit Points: 58
 Damage: 9
 
-Magic Missile manas 53 mana.
+Magic Missile costs 53 mana.
 	It instantly does 4 damage.
-Drain manas 73 mana.
+Drain costs 73 mana.
 	It instantly does 2 damage and heals you for 2 hit points.
-Shield manas 113 mana.
+Shield costs 113 mana.
 	It starts an effect that lasts for 6 turns.
 	While it is active, your armor is increased by 7.
-Poison manas 173 mana.
+Poison costs 173 mana.
 	It starts an effect that lasts for 6 turns.
 	At the start of each turn while it is active, it deals the boss 3 damage.
-Recharge manas 229 mana.
+Recharge costs 229 mana.
 	It starts an effect that lasts for 5 turns.
 	At the start of each turn while it is active, it gives you 101 new mana.
 """
@@ -87,7 +87,7 @@ def playerwins(actions, verbose=False):
 		else:
 			if verbose: print("-- Boss turn --")
 			playerHP -= (bossD-7 if shieldT else bossD)
-			if verbose: print("Boss attacks for", "9 - 7 = 1" if shieldT else "9", "damage!")
+			if verbose: print("Boss attacks for", "9 - 7 = 2" if shieldT else "9", "damage!")
 		if verbose: print("- Player has", playerHP, "hit points,", 7 if shieldT else 0, "armor,", mana, "mana.")
 		if verbose: print("- Boss has", bossHP, "hit points.")
 		if bossHP <= 0:
