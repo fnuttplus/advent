@@ -1,2 +1,5 @@
 *.obj
 *.exe
+.vscode
+aoc.py
+sample.in
