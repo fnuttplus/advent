@@ -1,4 +1,6 @@
 *.obj
+*.pdb
+*.ilk
 *.exe
 .vscode
 aoc.py
