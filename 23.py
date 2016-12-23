@@ -8,30 +8,23 @@ def toggle(i):
         ins[i][0] = "dec" if ins[i][0] == "inc" else "inc"
     else:
         ins[i][0] = "cpy" if ins[i][0] == "jnz" else "jnz"
-    return ins[i]
 
 def val(v):
-    if v in reg: v = reg[v]
-    else: v = int(v)
-    return v
+    try: return reg[v]
+    except: return int(v)
 
 ip = 0
 reg = {a:0 for a in "abcd"}
 reg["a"] = 7
 while ip < len(ins):
-    line = ins[ip]
+    i = ins[ip]
     ip += 1
-    if line[0] == "cpy":
-        reg[line[2]] = val(line[1])
-    elif line[0] == "inc":
-        reg[line[1]] += 1        
-    elif line[0] == "dec":
-        reg[line[1]] -= 1        
-    elif line[0] == "jnz":
-        if val(line[1]): ip += val(line[2])-1
-    elif line[0] == "tgl":
-        v = val(line[1])
-        print(ip,v,toggle(ip+v-1))
+    if   i[0] == "cpy": reg[i[2]] = val(i[1])
+    elif i[0] == "inc": reg[i[1]] += 1
+    elif i[0] == "dec": reg[i[1]] -= 1
+    elif i[0] == "jnz":
+        if val(i[1]): ip += val(i[2])-1
+    elif i[0] == "tgl": toggle(ip+val(i[1])-1)
 print(reg["a"])
 
 def f(x):
