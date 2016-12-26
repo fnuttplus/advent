@@ -1,0 +1,33 @@
+cpy 4 c
+cpy 633 b
+inc d
+dec b
+jnz b -2
+dec c
+jnz c -5
+cpy d e
+cpy 0 a
+cpy 4 c
+jnz d 2
+jnz 1 6
+dec d
+dec c
+jnz c -4
+inc a
+jnz 1 -7
+jnz b 2
+jnz 1 7
+cpy b d
+inc b
+inc b
+inc b
+dec d
+jnz d -4
+inc b
+inc b
+cpy a d
+jnz d -20
+dec e
+dec b
+jnz e -2
+out b
