@@ -3,5 +3,5 @@
 *.ilk
 *.exe
 .vscode
-aoc.py
-sample.in
+*/target
+*/__pycache__
